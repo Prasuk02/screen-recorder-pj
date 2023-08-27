@@ -1,0 +1,94 @@
+.navbar {
+    margin: auto;
+    width: 100%;
+    background-color: #111827;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .navbarHeading {
+    color: #efefef;
+    text-align: center;
+    font-size: 17.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .logo {
+    width: 35px;
+  }
+  
+  .homeMainContainer {
+    background-color: #202837;
+    width: 100%;
+    height: calc(100vh - 20px - 35px);
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recorderBox {
+    background-color: #171521;
+    width: 70%;
+    height: 85%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .screenRecorderBox {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cameraRecorderBox {
+    width: 16%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 3px 0px 0px 0px;
+  }
+  
+  .recorderControlBtn {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 15px;
+  }
+  
+  .stopBtn,
+  .startBtn {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  
+  .startBtn {
+    background-color: rgb(23, 107, 44);
+  }
+  
+  .stopBtn {
+    background-color: #c01d2d;
+  }
+  
+  .stopBtn:disabled,
+  .startBtn:disabled {
+    opacity: 50%;
+  }
+  
+  .stopBtn:hover,
+  .startBtn:hover {
+    cursor: pointer;
+  }

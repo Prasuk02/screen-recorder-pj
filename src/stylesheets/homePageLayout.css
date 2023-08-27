@@ -1,0 +1,17 @@
+.homePageLayout {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .recorderLayout {
+    width: 80vw;
+  }
+  
+  .savedRecordingLayout {
+    width: 20vw;
+    background-color: #202837;
+    padding: 40px;
+    border-left: 1px solid rgb(94, 94, 94);
+    overflow-y: auto;
+    height: calc(100vh - 20px - 35px);
+  }
