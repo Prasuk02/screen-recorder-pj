@@ -1,28 +1,4 @@
-.navbar {
-    margin: auto;
-    width: 100%;
-    background-color: #111827;
-    padding: 10px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .navbarHeading {
-    color: #efefef;
-    text-align: center;
-    font-size: 17.5px;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
-  
-  .logo {
-    width: 35px;
-  }
-  
-  .homeMainContainer {
+ .homeMainContainer {
     background-color: #202837;
     width: 100%;
     height: calc(100vh - 20px - 35px);
