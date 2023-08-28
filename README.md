@@ -3,6 +3,15 @@
 ### LOGIN PAGE
 ![LOGIN PAGE](https://raw.githubusercontent.com/Prasuk02/screen-recorder-pj/main/project_output_images/loginPage.png)
 
+**AUTHENTICATION CHECK IMAGES**
+![LOGIN PAGE](https://raw.githubusercontent.com/Prasuk02/screen-recorder-pj/main/project_output_images/loginAuth.png)
+
+![LOGIN PAGE](https://raw.githubusercontent.com/Prasuk02/screen-recorder-pj/main/project_output_images/invalidPassword.png)
+
+![LOGIN PAGE](https://raw.githubusercontent.com/Prasuk02/screen-recorder-pj/main/project_output_images/userNotFound.png)
+
+![LOGIN PAGE](https://raw.githubusercontent.com/Prasuk02/screen-recorder-pj/main/project_output_images/authSignup.png)
+
 ### SIGNUP PAGE
 ![SIGNUP PAGE](https://raw.githubusercontent.com/Prasuk02/screen-recorder-pj/main/project_output_images/signupPage.png)
 
