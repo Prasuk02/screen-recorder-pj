@@ -5,8 +5,8 @@ import logoTest from "../images/logoTest.png";
 import Alert from "../components/Alert";
 import { Link, useNavigate } from "react-router-dom";
 
-const SignupPage = ({setIsAuthUser}) => {
-  const navigate = useNavigate()
+const SignupPage = ({ setIsAuthUser }) => {
+  const navigate = useNavigate();
   const [signupCredentials, setSignupCredentials] = useState({});
   const [signupError, setSignupError] = useState("");
   const [invalidSignupError, setInvalidSignupError] = useState("");
@@ -25,18 +25,11 @@ const SignupPage = ({setIsAuthUser}) => {
       signupCredentials?.username &&
       signupCredentials?.password
     ) {
-      let regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-      if (regex.test(signupCredentials.email)) {
-        let savedUsers = JSON.parse(localStorage.getItem("users"))
-          ? JSON.parse(localStorage.getItem("users"))
-          : {};
-        let { email, ...restDetails } = signupCredentials;
-        localStorage.setItem(
-          "users",
-          JSON.stringify({ ...savedUsers, [email]: restDetails })
-        );
-        setIsAuthUser({status: true, username: restDetails.username})
-        navigate('/home')
+      let emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+      if (emailRegex.test(signupCredentials.email)) {
+        localStorage.setItem("currentUser", JSON.stringify(signupCredentials));
+        setIsAuthUser({ status: true, username: signupCredentials.username });
+        navigate("/home");
       } else {
         setSignupError("Invalid Email Id");
       }

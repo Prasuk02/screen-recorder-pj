@@ -9,7 +9,7 @@ const LoginPage = ({ setIsAuthUser }) => {
   const [loginCredentials, setLoginCredentials] = useState({});
   const [invalidEmailError, setInvalidEmailError] = useState("");
   const [loginError, setLoginError] = useState("");
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   const handleLoginCredentials = (event) => {
     setLoginCredentials({
@@ -20,19 +20,27 @@ const LoginPage = ({ setIsAuthUser }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    let regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    let emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     let { email, password: loginPassword } = loginCredentials;
-    if (regex.test(email)) {
-      let validUsers = JSON.parse(localStorage.getItem("users"));
-      if (email in validUsers) {
-        if (validUsers[email].password == loginPassword) {
-          setIsAuthUser({ status: true, username: validUsers[email].username });
-          navigate('/home')
+    if (emailRegex.test(email)) {
+      let currentUser = JSON.parse(localStorage.getItem("user"));
+      if (currentUser) {
+        if (currentUser.email == email) {
+          if (currentUser.password == loginPassword) {
+            setIsAuthUser({
+              status: true,
+              username: currentUser.username,
+            });
+            navigate("/home");
+          } else {
+            setLoginError("Invalid Password!!");
+          }
         } else {
-          setLoginError("Invalid Password!!");
+          setLoginError("Email Id not registered!!");
         }
-      } else {
-        setLoginError("Email Id not registered!!");
+      }
+      else{
+        return navigate('/signup')
       }
     } else {
       setInvalidEmailError("Invalid Email Id!!");

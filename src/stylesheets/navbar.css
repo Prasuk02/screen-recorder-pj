@@ -1,24 +1,57 @@
 .navbar {
-    margin: auto;
-    width: 100%;
-    background-color: #111827;
-    padding: 10px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    position: relative;
-  }
-  
-  .navbarHeading {
-    color: #efefef;
-    text-align: center;
-    font-size: 17.5px;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
-  
-  .logo {
-    width: 35px;
-  }
+  margin: auto;
+  width: 100%;
+  background-color: #111827;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.navbarHeading {
+  color: #efefef;
+  text-align: center;
+  font-size: 17.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logo {
+  width: 35px;
+}
+
+.logoutBtn {
+  background-color: #606773;
+  padding: 8px 14px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 11.5px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.logoutBtn:hover{
+  cursor: pointer;
+}
+
+.navLoginText {
+  position: absolute;
+  right: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.navUsernameText {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
