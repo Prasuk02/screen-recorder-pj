@@ -3,9 +3,10 @@ import loginBg from "../images/loginBg.png";
 import "../stylesheets/signupPage.css";
 import logoTest from "../images/logoTest.png";
 import Alert from "../components/Alert";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const SignupPage = () => {
+const SignupPage = ({setIsAuthUser}) => {
+  const navigate = useNavigate()
   const [signupCredentials, setSignupCredentials] = useState({});
   const [signupError, setSignupError] = useState("");
   const [invalidSignupError, setInvalidSignupError] = useState("");
@@ -34,6 +35,8 @@ const SignupPage = () => {
           "users",
           JSON.stringify({ ...savedUsers, [email]: restDetails })
         );
+        setIsAuthUser({status: true, username: restDetails.username})
+        navigate('/home')
       } else {
         setSignupError("Invalid Email Id");
       }

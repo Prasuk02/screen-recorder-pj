@@ -24,7 +24,7 @@ function App() {
             path={"/"}
             element={<LoginPage setIsAuthUser={setIsAuthUser} />}
           />
-          <Route path={"/signup"} element={<SignupPage />} />
+          <Route path={"/signup"} element={<SignupPage setIsAuthUser={setIsAuthUser}/>} />
           <Route
             path={"/home"}
             element={
